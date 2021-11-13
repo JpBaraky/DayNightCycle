@@ -2,7 +2,7 @@
 
 
 
-![Alt text](https://github.com/JpBaraky/Unity3DDay-NightCycle/blob/main/game.png)
+![Alt text](https://github.com/JpBaraky/Unity3DDay-NightCycle/blob/develop/game.png)
 
 <p>This is a personal non-monetary project with study purposes. Open Source, feel free to ask anything or use any code. What as the days pass and your mind go with it. Take some time to meditate and relax. </p> 
 <h3>Download Instructions</h3>

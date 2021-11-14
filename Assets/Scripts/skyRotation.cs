@@ -11,9 +11,9 @@ public class skyRotation : MonoBehaviour
        skyDomeDayNight = FindObjectOfType(typeof(skyDomeDayNight)) as skyDomeDayNight;
     }
 
+   void FixedUpdate(){
+          transform.Rotate(rotationSpeed * skyDomeDayNight.cycleSpeed); //Leave the rotation speed on 360 for better timing
 
-    void Update()
-    {
-          transform.Rotate(rotationSpeed * skyDomeDayNight.cycleSpeed  * Time.deltaTime); //Leave the rotation speed on 360 for better timing
-    }
+   }
+   
 }

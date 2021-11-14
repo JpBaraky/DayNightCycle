@@ -7,7 +7,7 @@ public class skyDomeDayNight : MonoBehaviour
 {
     private Material material;
     public int days;
-   
+    
     [Header("Light Settings")] //Set the moon, starts and sun objects
 
     public Light Light;
@@ -20,17 +20,16 @@ public class skyDomeDayNight : MonoBehaviour
     void Start()
     {
         material = GetComponent<Renderer>().material; // Gets the material of the Sky
-    
+        
     }
 
   
     void Update()
-    {
+    {      
        CycleDay();
       
-       SunLight();
-
-    }
+       SunLight();    
+   }
     void CycleDay(){ // Day and Night Cycle
          offSet += cycleSpeed * Time.deltaTime; 
         material.SetTextureOffset("_MainTex" , new Vector2(offSet, 0));   // Increase the offset of the object in a certain rate 

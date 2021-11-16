@@ -11,7 +11,7 @@ public class daysCounter : MonoBehaviour
    
     void Start()
     {
-        Application.targetFrameRate = 60;
+        
         skyDomeDayNight = FindObjectOfType(typeof(skyDomeDayNight)) as skyDomeDayNight;
     }
 

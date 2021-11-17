@@ -7,15 +7,13 @@ public class skyDomeDayNight : MonoBehaviour
 {
     private Material material;
     public int days;
+
+ 
     
     [Header("Light Settings")] //Set the moon, starts and sun objects
 
     public Light Light;
-    public ParticleSystem.MainModule mainModule;
-    
-
-
-    public GameObject fire;
+   
     private float maxLight = 1.0f;
     private float minLight = 0.0f;
     static float t;
@@ -24,7 +22,7 @@ public class skyDomeDayNight : MonoBehaviour
     public float offSet; //Set how the Cycle will start
     void Start()
     {
-        mainModule = fire.GetComponent<ParticleSystem>().main;
+        
         material = GetComponent<Renderer>().material; // Gets the material of the Sky
         
     }
@@ -36,7 +34,6 @@ public class skyDomeDayNight : MonoBehaviour
       
        SunLight();   
 
-       FirePit(); 
    }
     void CycleDay(){ // Day and Night Cycle
          offSet += cycleSpeed * Time.deltaTime; 
@@ -64,13 +61,5 @@ public class skyDomeDayNight : MonoBehaviour
 
 
     }
-    void FirePit(){ // turns on and off the firepit
-        if(offSet >= 0.7 || offSet <= 0.3){
-            mainModule.startSizeMultiplier = 1; 
-                     
-    } else{
-        
-        mainModule.startSizeMultiplier = 0; 
-    }
-    }
+   
 }
